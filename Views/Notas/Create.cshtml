@@ -1,0 +1,67 @@
+﻿@model LeitorNfe.Models.Nota
+
+@{
+    ViewData["Title"] = "Nota";
+}
+
+<h1>Criar Nota</h1>
+
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="nNota" class="control-label"></label>
+                <input asp-for="nNota" class="form-control" />
+                <span asp-validation-for="nNota" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="dEmissao" class="control-label"></label>
+                <input asp-for="dEmissao" class="form-control" />
+                <span asp-validation-for="dEmissao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IDEmitente" class="control-label"></label>
+                <input asp-for="IDEmitente" class="form-control" />
+                <span asp-validation-for="IDEmitente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IDDestinatario" class="control-label"></label>
+                <input asp-for="IDDestinatario" class="form-control" />
+                <span asp-validation-for="IDDestinatario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="nPedidoCompra" class="control-label"></label>
+                <input asp-for="nPedidoCompra" class="form-control" />
+                <span asp-validation-for="nPedidoCompra" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IDProduto" class="control-label"></label>
+                <input asp-for="IDProduto" class="form-control" />
+                <span asp-validation-for="IDProduto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cAcesso" class="control-label"></label>
+                <input asp-for="cAcesso" class="form-control" />
+                <span asp-validation-for="cAcesso" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="comentario" class="control-label"></label>
+                <input asp-for="comentario" class="form-control" />
+                <span asp-validation-for="comentario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="totalNota" class="control-label"></label>
+                <input asp-for="totalNota" class="form-control" />
+                <span asp-validation-for="totalNota" class="text-danger"></span>
+            </div>
+            <div class="form-group m-2">
+                <input type="submit" value="Criar" class="btn btn-primary btn-success" /> |
+                <a asp-action="Index">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
+

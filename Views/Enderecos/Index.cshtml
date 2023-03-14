@@ -1,0 +1,67 @@
+﻿@model IEnumerable<LeitorNfe.Models.Endereco>
+
+@{
+    ViewData["Title"] = "Endereços";
+    <link rel="stylesheet" href="~/css/consulta.css" asp-append-version="true" />
+}
+
+<h1>Consulta de Endereços</h1>
+
+<button onclick="location.href='@Url.Action("Create","Enderecos")'">
+    Cadastrar
+</button>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.logadouro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.numero)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bairro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.municipio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uf)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cep)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.logadouro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.numero)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bairro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.municipio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uf)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cep)
+            </td>
+            <td>
+                <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.IDEndereco">Edit</a> |
+                <a class="btn btn-info" asp-action="Details" asp-route-id="@item.IDEndereco">Details</a> |
+                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.IDEndereco">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

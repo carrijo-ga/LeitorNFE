@@ -1,0 +1,53 @@
+﻿@model LeitorNfe.Models.Produto
+
+@{
+    ViewData["Title"] = "Produto";
+}
+
+<h1>Detalhes do produto: @Html.DisplayFor(model => model.nItem)</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.nItem)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.nItem)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.cProduto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.cProduto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.nProduto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.nProduto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.qtdProduto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.qtdProduto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.vUnitario)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.vUnitario)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.vTotalProduto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.vTotalProduto)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="btn btn-info" asp-action="Edit" asp-route-id="@Model?.IDProduto">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

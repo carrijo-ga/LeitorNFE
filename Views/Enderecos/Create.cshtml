@@ -1,0 +1,52 @@
+﻿@model LeitorNfe.Models.Endereco
+
+@{
+    ViewData["Title"] = "Endereço";
+}
+
+<h1>Criar Endereço</h1>
+
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="logadouro" class="control-label"></label>
+                <input asp-for="logadouro" class="form-control" />
+                <span asp-validation-for="logadouro" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="numero" class="control-label"></label>
+                <input asp-for="numero" class="form-control" />
+                <span asp-validation-for="numero" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="bairro" class="control-label"></label>
+                <input asp-for="bairro" class="form-control" />
+                <span asp-validation-for="bairro" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="municipio" class="control-label"></label>
+                <input asp-for="municipio" class="form-control" />
+                <span asp-validation-for="municipio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="uf" class="control-label"></label>
+                <input asp-for="uf" class="form-control" />
+                <span asp-validation-for="uf" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cep" class="control-label"></label>
+                <input asp-for="cep" class="form-control" />
+                <span asp-validation-for="cep" class="text-danger"></span>
+            </div>
+            <div class="form-group m-2">
+                <input type="submit" value="Create" class="btn btn-primary btn-success" /> |
+                <a asp-action="Index">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
+

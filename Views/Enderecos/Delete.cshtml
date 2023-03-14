@@ -1,0 +1,55 @@
+﻿@model LeitorNfe.Models.Endereco
+
+@{
+    ViewData["Title"] = "Endereço";
+}
+
+<h3 class="m-3">Você tem certeza que deseja excluir este endereço?</h3>
+<div>
+    <h4>Endereco</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.logadouro)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.logadouro)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.numero)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.numero)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.bairro)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.bairro)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.municipio)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.municipio)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.uf)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.uf)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.cep)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.cep)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="IDEndereco" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

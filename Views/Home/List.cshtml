@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewData["Title"] = "Consultar";
+}
+
+<link rel="stylesheet" href="~/css/create.css" asp-append-version="true" />
+
+<div class="text-center">
+    <h1 class="display-4">Escolha abaixo uma das opções para consultar:</h1>
+    <div class="buttons">
+        <button onclick="location.href='@Url.Action("Index","Notas")'">
+            Notas
+        </button>
+        <button onclick="location.href='@Url.Action("Index","Produtos")'">
+            Produto
+        </button>    
+        <button onclick="location.href='@Url.Action("Index","Enderecos")'">
+            Endereço
+        </button>
+        <button onclick="location.href='@Url.Action("Index","Emitentes")'">
+            Emitente
+        </button>    
+        <button onclick="location.href='@Url.Action("Index","Destinatarios")'">
+            Destinatário
+        </button>
+    </div>
+</div>
+
+<div class="img position-absolute start-50 translate-middle">
+    <div class="bg_img position-absolute top-50 start-50 translate-middle"></div>
+    <img class="home_img" src="~/img/man-sapiens.svg" />
+</div>

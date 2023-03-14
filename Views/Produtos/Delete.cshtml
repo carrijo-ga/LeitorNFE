@@ -1,0 +1,55 @@
+﻿@model LeitorNfe.Models.Produto
+
+@{
+    ViewData["Title"] = "Produto";
+}
+
+<h3 class="m-3">Você tem certeza que deseja excluir o produto: @Html.DisplayFor(model => model.nItem)?</h3>
+<div>
+    <h4>Produto</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.nItem)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.nItem)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.cProduto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.cProduto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.nProduto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.nProduto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.qtdProduto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.qtdProduto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.vUnitario)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.vUnitario)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.vTotalProduto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.vTotalProduto)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="IDProduto" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

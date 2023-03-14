@@ -1,0 +1,72 @@
+﻿@model LeitorNfe.Models.Nota
+
+@{
+    ViewData["Title"] = "Nota";
+}
+
+<h3 class="m-3">Você tem certeza que deseja excluir a nota: @Html.DisplayFor(model => model.nNota)?</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.nNota)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.nNota)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.dEmissao)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.dEmissao)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IDEmitente)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IDEmitente)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IDDestinatario)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IDDestinatario)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.nPedidoCompra)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.nPedidoCompra)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IDProduto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IDProduto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.cAcesso)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.cAcesso)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.comentario)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.comentario)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.totalNota)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.totalNota)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="IDNota" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

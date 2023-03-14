@@ -1,0 +1,41 @@
+﻿@model LeitorNfe.Models.Destinatario
+
+@{
+    ViewData["Title"] = "Destinatário";
+}
+
+<h1>Criar Destinatario</h1>
+
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="nome" class="control-label"></label>
+                <input asp-for="nome" class="form-control" />
+                <span asp-validation-for="nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IDEndereco" class="control-label"></label>
+                <input asp-for="IDEndereco" class="form-control" />
+                <span asp-validation-for="IDEndereco" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cnpj" class="control-label"></label>
+                <input asp-for="cnpj" class="form-control" />
+                <span asp-validation-for="cnpj" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="email" class="control-label"></label>
+                <input asp-for="email" class="form-control" />
+                <span asp-validation-for="email" class="text-danger"></span>
+            </div>
+            <div class="form-group m-2">
+                <input type="submit" value="Create" class="btn btn-primary btn-success" /> |
+                <a asp-action="Index">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>

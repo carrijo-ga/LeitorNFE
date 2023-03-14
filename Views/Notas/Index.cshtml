@@ -1,0 +1,55 @@
+﻿@model IEnumerable<LeitorNfe.Models.Nota>
+
+@{
+    ViewData["Title"] = "Notas";
+    <link rel="stylesheet" href="~/css/consulta.css" asp-append-version="true" />
+}
+
+<h1>Consulta de Notas</h1>
+
+<button onclick="location.href='@Url.Action("Create","Notas")'">
+    Cadastrar
+</button>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.nNota)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dEmissao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IDEmitente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IDDestinatario)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nNota)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dEmissao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IDEmitente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IDDestinatario)
+            </td>
+            <td>
+                <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.IDNota">Edit</a> |
+                <a class="btn btn-info" asp-action="Details" asp-route-id="@item.IDNota">Details</a> |
+                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.IDNota">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
